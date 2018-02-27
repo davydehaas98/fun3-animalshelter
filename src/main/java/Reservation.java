@@ -7,7 +7,7 @@ public class Reservation {
         return Animals;
     }
 
-    public void setAnimals(ArrayList<Animal> animals) {
+    private void setAnimals(ArrayList<Animal> animals) {
         Animals = animals;
     }
 

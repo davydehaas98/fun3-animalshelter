@@ -19,8 +19,8 @@ public class Animal {
     public String toString(){
         String reserved = "not reserved";
         if(ReservedBy != null){
-            reserved = "reserved by " + ReservedBy.Name;
+            reserved = String.format("reserved by %s", ReservedBy.Name);
         }
-        return Name + ", " + Gender + ", " + reserved;
+        return String.format("%s, %s, %s",Name, Gender, reserved);
     }
 }
