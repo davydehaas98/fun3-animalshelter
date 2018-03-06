@@ -16,7 +16,14 @@
             </plugin>
         </plugins>
     </build>
- <groupId>AnimalShelter</groupId>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+    </dependencies>
+    <groupId>AnimalShelter</groupId>
     <artifactId>animalshelter</artifactId>
     <version>1.0-SNAPSHOT</version>
 

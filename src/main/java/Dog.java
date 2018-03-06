@@ -13,7 +13,7 @@ public class Dog extends Animal {
     }
 
     public boolean getNeedsWalk() {
-        return Math.abs(Duration.between(LocalDate.now(), LastWalk).toDays()) > 0;
+        return Math.abs(Duration.between(LocalDate.now().atStartOfDay(), LastWalk.atStartOfDay()).toDays()) > 0;
     }
 
     public Dog(String name, Gender gender) {
