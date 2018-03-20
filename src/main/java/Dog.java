@@ -2,12 +2,11 @@ import java.time.Duration;
 import java.time.LocalDate;
 
 public class Dog extends Animal {
-    public LocalDate LastWalk;
+    private LocalDate LastWalk;
 
     public LocalDate getLastWalk() {
         return LastWalk;
     }
-
     private void setLastWalk(LocalDate lastWalk) {
         LastWalk = lastWalk;
     }

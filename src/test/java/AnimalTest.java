@@ -12,17 +12,17 @@ public class AnimalTest {
     @Test
     public void testConstructor()
     {
-        assertEquals("Ugly Duckling", this.animal.Name);
-        assertEquals(Gender.Male, this.animal.Gender);
-        assertNull(this.animal.ReservedBy);
+        assertEquals("Ugly Duckling", this.animal.getName());
+        assertEquals(Gender.Male, this.animal.getGender());
+        assertNull(this.animal.getReservedBy());
     }
     @Test
     public void testReservation()
     {
-        assertNull(this.animal.ReservedBy);
+        assertNull(this.animal.getReservedBy());
         assertTrue(this.animal.Reserve("John Doe"));
-        assertNotNull(this.animal.ReservedBy);
-        assertEquals("John Doe", this.animal.ReservedBy.Name);
+        assertNotNull(this.animal.getReservedBy());
+        assertEquals("John Doe", this.animal.getReservedBy().getName());
         assertFalse(this.animal.Reserve("Jane Doe"));
     }
 }

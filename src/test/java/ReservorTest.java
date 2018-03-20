@@ -9,7 +9,7 @@ public class ReservorTest {
     public void testConstructor(){
         LocalDate reservedAt = LocalDate.now();
         Reservor reservor = new Reservor("John Doe", reservedAt);
-        assertEquals("John Doe", reservor.Name);
-        assertEquals(reservedAt, reservor.ReservedAt);
+        assertEquals("John Doe", reservor.getName());
+        assertEquals(reservedAt, reservor.getReservedAt());
     }
 }

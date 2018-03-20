@@ -1,5 +1,5 @@
 public class Cat extends Animal{
-    public String BadHabits;
+    private String BadHabits;
 
     public String getBadHabits() {
         return BadHabits;

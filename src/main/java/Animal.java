@@ -1,9 +1,22 @@
 import java.time.LocalDate;
 
 public class Animal {
-    public String Name;
-    public Gender Gender;
-    public Reservor ReservedBy;
+    private String Name;
+    private Gender Gender;
+    private Reservor ReservedBy;
+
+    public String getName() {
+        return Name;
+    }
+
+    public Gender getGender() {
+        return Gender;
+    }
+
+    public Reservor getReservedBy() {
+        return ReservedBy;
+    }
+
     public Animal(String name, Gender gender){
         Name = name;
         Gender = gender;
@@ -19,7 +32,7 @@ public class Animal {
     public String toString(){
         String reserved = "not reserved";
         if(ReservedBy != null){
-            reserved = String.format("reserved by %s", ReservedBy.Name);
+            reserved = String.format("reserved by %s", ReservedBy.getName());
         }
         return String.format("%s, %s, %s",Name, Gender, reserved);
     }

@@ -12,15 +12,15 @@ public class ReservationTest {
     }
     @Test
     public void TestNewCat(){
-        assertEquals(0, this.reservation.Animals.size());
+        assertEquals(0, this.reservation.getAnimals().size());
         this.reservation.NewCat("Ms. Meow", Gender.Female, "Scratches couch");
-        assertEquals(1, this.reservation.Animals.size());
+        assertEquals(1, this.reservation.getAnimals().size());
     }
     @Test
     public void TestNewDog()
     {
-        assertEquals(0, this.reservation.Animals.size());
+        assertEquals(0, this.reservation.getAnimals().size());
         this.reservation.NewDog("Sgt. Woof", Gender.Male);
-        assertEquals(1, this.reservation.Animals.size());
+        assertEquals(1, this.reservation.getAnimals().size());
     }
 }

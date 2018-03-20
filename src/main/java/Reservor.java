@@ -1,8 +1,8 @@
 import java.time.LocalDate;
 
 public class Reservor {
-    public String Name;
-    public LocalDate ReservedAt;
+    private String Name;
+    private LocalDate ReservedAt;
     public String getName() {
         return Name;
     }

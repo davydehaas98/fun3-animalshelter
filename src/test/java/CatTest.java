@@ -11,18 +11,18 @@ public class CatTest {
     }
     @Test
     public void testConstructor(){
-        assertEquals("Ms. Meow", this.cat.Name);
-        assertEquals(Gender.Female, this.cat.Gender);
-        assertNull(this.cat.ReservedBy);
-        assertEquals("Scratches couch", this.cat.BadHabits);
+        assertEquals("Ms. Meow", this.cat.getName());
+        assertEquals(Gender.Female, this.cat.getGender());
+        assertNull(this.cat.getReservedBy());
+        assertEquals("Scratches couch", this.cat.getBadHabits());
     }
     @Test
     public void testReservation()
     {
-        assertNull(this.cat.ReservedBy);
+        assertNull(this.cat.getReservedBy());
         assertTrue(this.cat.Reserve("John Doe"));
-        assertNotNull(this.cat.ReservedBy);
-        assertEquals("John Doe", this.cat.ReservedBy.Name);
+        assertNotNull(this.cat.getReservedBy());
+        assertEquals("John Doe", this.cat.getReservedBy().getName());
         assertFalse(this.cat.Reserve("Jane Doe"));
     }
 }

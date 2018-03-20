@@ -13,19 +13,19 @@ public class DogTest {
     }
     @Test
     public void testConstructor(){
-        assertEquals("Sgt. Woof", this.dog.Name);
-        assertEquals(Gender.Male, this.dog.Gender);
-        assertNull(this.dog.ReservedBy);
-        assertEquals(LocalDate.now().atStartOfDay(), this.dog.LastWalk.atStartOfDay());
+        assertEquals("Sgt. Woof", this.dog.getName());
+        assertEquals(Gender.Male, this.dog.getGender());
+        assertNull(this.dog.getReservedBy());
+        assertEquals(LocalDate.now().atStartOfDay(), this.dog.getLastWalk().atStartOfDay());
         assertFalse(this.dog.getNeedsWalk());
     }
     @Test
     public void testReservation()
     {
-        assertNull(this.dog.ReservedBy);
+        assertNull(this.dog.getReservedBy());
         assertTrue(this.dog.Reserve("John Doe"));
-        assertNotNull(this.dog.ReservedBy);
-        assertEquals("John Doe", this.dog.ReservedBy.Name);
+        assertNotNull(this.dog.getReservedBy());
+        assertEquals("John Doe", this.dog.getReservedBy().getName());
         assertFalse(this.dog.Reserve("Jane Doe"));
     }
 }
